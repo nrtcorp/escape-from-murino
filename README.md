@@ -9,7 +9,7 @@
 * **Kanat**
 
 ## Лицензия
-Исходный код проекта распространяется под лицензией **GPLv3** (подробности см. в файле [LICENSE](https://github.com/nrtcorp/escape-from-murino/blob/main/LICENSE)). 
+Исходный код проекта распространяется под лицензией **GPLv3** (подробности см. в файле [LICENSE](https://github.com/nrtcorp/escape-from-murino/blob/master/LICENSE)). 
 
 Все сторонние ассеты принадлежат их законным авторам. NRT Corp. ни в коем случае не присваивает права на них себе.
 
