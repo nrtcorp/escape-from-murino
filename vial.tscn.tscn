@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://datsttnb3uhph"]
+
+[ext_resource type="Script" uid="uid://dtslj2rovo4kq" path="res://vial.tscn.gd" id="1_v3ubu"]
+[ext_resource type="PackedScene" uid="uid://c6bttl6krkg10" path="res://probirka.glb" id="1_vhgky"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0eiqk"]
+size = Vector3(0.17749023, 0.4404297, 0.14477539)
+
+[node name="ReagentVial" type="StaticBody3D" unique_id=2064835749]
+transform = Transform3D(1.9354846, 0, 0, 0, 1.5761589, 0, 0, 0, 1.7301569, 0, 0, 0)
+script = ExtResource("1_v3ubu")
+
+[node name="blockbench_export" parent="." unique_id=1929579269 instance=ExtResource("1_vhgky")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1333335021]
+transform = Transform3D(0.9999545, 0, 0, 0, 0.87073076, 0, 0, 0, 1, 0, 0.3104961, 0)
+shape = SubResource("BoxShape3D_0eiqk")

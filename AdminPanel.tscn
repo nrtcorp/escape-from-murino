@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cqgrn38wrhgie"]
+
+[ext_resource type="Script" uid="uid://c5urry0u6mirl" path="res://admin_panel.gd" id="1_1agv3"]
+
+[node name="AdminPanel" type="Control" unique_id=250673029]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1agv3")
+
+[node name="Panel" type="Panel" parent="." unique_id=1768169816]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=240059104]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 260.0
+offset_right = 706.0
+offset_bottom = 388.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=563603772]
+layout_mode = 2
+text = "=== АДМИН-ПАНЕЛЬ ==="
+
+[node name="NoclipButton" type="Button" parent="Panel/VBoxContainer" unique_id=1117050337]
+layout_mode = 2
+text = "Включить/Выключить Noclip"
+
+[node name="AddChekooshkiButton" type="Button" parent="Panel/VBoxContainer" unique_id=1050373143]
+layout_mode = 2
+text = "Выдать +10 чекушек"
+
+[node name="LaserVisionButton" type="Button" parent="Panel/VBoxContainer" unique_id=708466695]
+layout_mode = 2
+text = "Лазерное зрение"
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1396639099]
+layout_mode = 2
+text = "Суперскорость"
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=480153432]
+layout_mode = 2
+text = "Закрыть"

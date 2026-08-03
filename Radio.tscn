@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cm6xo3l8a1fbj"]
+
+[ext_resource type="Script" uid="uid://jvlodt47mnob" path="res://radio.gd" id="1_w7vce"]
+[ext_resource type="AudioStream" uid="uid://b5rc3xm5d8s4w" path="res://аура.mp3" id="2_f1yvf"]
+[ext_resource type="AudioStream" uid="uid://biovspjau878q" path="res://вот такой хаммам.mp3" id="3_aoj4l"]
+[ext_resource type="AudioStream" uid="uid://bueg6lx2qtjjj" path="res://експанат.mp3" id="4_aoj2f"]
+[ext_resource type="Texture2D" uid="uid://bk24meftxkc6a" path="res://Concrete044B_2K-JPG_Color.jpg" id="5_cg6eq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y44pw"]
+albedo_texture = ExtResource("5_cg6eq")
+
+[sub_resource type="BoxMesh" id="BoxMesh_0eiqk"]
+size = Vector3(2.7736816, 1.8791504, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6tsi"]
+albedo_texture = ExtResource("5_cg6eq")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3f502"]
+height = 0.3569336
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4tbt"]
+albedo_texture = ExtResource("5_cg6eq")
+
+[sub_resource type="BoxMesh" id="BoxMesh_3f502"]
+size = Vector3(0.27246094, 1, 0.28515625)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0eiqk"]
+size = Vector3(2.804657, 1.8704834, 1.4150391)
+
+[node name="Radio" type="StaticBody3D" unique_id=1704013225]
+script = ExtResource("1_w7vce")
+songs = Array[AudioStream]([ExtResource("2_f1yvf"), ExtResource("3_aoj4l"), ExtResource("4_aoj2f")])
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=108555864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7441466, 0)
+material_override = SubResource("StandardMaterial3D_y44pw")
+mesh = SubResource("BoxMesh_0eiqk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1201275605]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.38614357, 0.69643164, 0.666746)
+material_override = SubResource("StandardMaterial3D_g6tsi")
+mesh = SubResource("CylinderMesh_3f502")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=783010806]
+transform = Transform3D(0.9085309, -0.41781762, 0, 0.41781762, 0.9085309, 0, 0, 0, 1, -1.0209439, 2.0411644, 0.020424485)
+material_override = SubResource("StandardMaterial3D_q4tbt")
+mesh = SubResource("BoxMesh_3f502")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=899777111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0041046143, 0.74920654, 0.20751953)
+shape = SubResource("BoxShape3D_0eiqk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=569366598]

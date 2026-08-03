@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cf13ho4jjp0c3"]
+
+[ext_resource type="Texture2D" uid="uid://bk88e3nb8toom" path="res://мурино заставк4а.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dlwpigjo2yl6d" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://dbwrh2ohfsuj1" path="res://button.gd" id="3_jix8l"]
+[ext_resource type="AudioStream" uid="uid://biovspjau878q" path="res://вот такой хаммам.mp3" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://c0k743blrfvl2" path="res://сидиь.jpg" id="4_nlkkf"]
+
+[node name="MainMenu" type="Control" unique_id=1582725153]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1496975703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06t4h")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="." unique_id=734107395]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -168.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="ButtonsContainer" unique_id=1923454547]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Играть"
+
+[node name="Button2" type="Button" parent="ButtonsContainer" unique_id=1469228753]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Информация"
+
+[node name="Button4" type="Button" parent="ButtonsContainer" unique_id=484168932]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Настройки"
+
+[node name="Button3" type="Button" parent="ButtonsContainer" unique_id=1736964393]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Выход"
+
+[node name="Button" type="Button" parent="." unique_id=1983002594]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 602.0
+offset_right = 111.0
+offset_bottom = 633.0
+text = "бурмалдить"
+script = ExtResource("3_jix8l")
+button_texture = ExtResource("4_nlkkf")
+button_music = ExtResource("4_glbon")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=10674938]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1483223064]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 533.0
+offset_right = 412.0
+offset_bottom = 1049.0
+scale = Vector2(0.15999942, 0.12000002)
+texture = ExtResource("4_nlkkf")
+
+[connection signal="pressed" from="ButtonsContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Button4" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Button3" to="." method="_on_button_3_pressed"]

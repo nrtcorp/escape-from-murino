@@ -1,0 +1,57 @@
+[gd_scene format=4 uid="uid://dtwv6bsv6de2c"]
+
+[ext_resource type="Texture2D" uid="uid://dbwdr7dlwx8ke" path="res://door_0.png" id="1_ba8gm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dirol"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_ba8gm")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4lirc"]
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.5, 0.125, 1.8125, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_stu22"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.0625, 0, -0.5, 0.125, 1.8125, 1),
+"attribute_data": PackedByteArray("AAAAAP8/AAAAAP9z/z//c/8/AAD/fwAA/z//c/9//3P/F/+z/w//s/8X/3P/D/9z/x//c/8X/3P/H/+z/xf/s/8H/3P/D/9z/wf/5/8P/+cAAP9z/wf/cwAA/+f/B//n"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
+"material": SubResource("StandardMaterial3D_dirol"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4lirc")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v6xrn"]
+data = PackedVector3Array(0.0625, 1.8125, 0.5, 0.0625, 1.8125, -0.5, 0.0625, 0, 0.5, 0.0625, 0, 0.5, 0.0625, 1.8125, -0.5, 0.0625, 0, -0.5, -0.0625, 1.8125, -0.5, -0.0625, 1.8125, 0.5, -0.0625, 0, -0.5, -0.0625, 0, -0.5, -0.0625, 1.8125, 0.5, -0.0625, 0, 0.5, -0.0625, 1.8125, -0.5, 0.0625, 1.8125, -0.5, -0.0625, 1.8125, 0.5, -0.0625, 1.8125, 0.5, 0.0625, 1.8125, -0.5, 0.0625, 1.8125, 0.5, -0.0625, 0, 0.5, 0.0625, 0, 0.5, -0.0625, 0, -0.5, -0.0625, 0, -0.5, 0.0625, 0, 0.5, 0.0625, 0, -0.5, -0.0625, 1.8125, 0.5, 0.0625, 1.8125, 0.5, -0.0625, 0, 0.5, -0.0625, 0, 0.5, 0.0625, 1.8125, 0.5, 0.0625, 0, 0.5, 0.0625, 1.8125, -0.5, -0.0625, 1.8125, -0.5, 0.0625, 0, -0.5, 0.0625, 0, -0.5, -0.0625, 1.8125, -0.5, -0.0625, 0, -0.5)
+
+[node name="blockbench_export" type="AnimatableBody3D" unique_id=1915830062]
+
+[node name="cube" type="MeshInstance3D" parent="." unique_id=1783016491]
+mesh = SubResource("ArrayMesh_stu22")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1424662132]
+shape = SubResource("ConcavePolygonShape3D_v6xrn")

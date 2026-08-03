@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://63trb48djogr"]
+
+[ext_resource type="Texture2D" uid="uid://cp6c21us8a605" path="res://фог.jpg" id="1_8tkrj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3f502"]
+size = Vector3(0.23583984, 4.0234375, 3.6889648)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q678"]
+albedo_texture = ExtResource("1_8tkrj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_0eiqk"]
+size = Vector3(0.18737793, 4.6958313, 3.7661133)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qyyav"]
+data = PackedVector3Array(-0.0937, 2.3479, 1.8830999, 0.0937, 2.3479, 1.8830999, -0.0937, -2.3479, 1.8830999, 0.0937, 2.3479, 1.8830999, 0.0937, -2.3479, 1.8830999, -0.0937, -2.3479, 1.8830999, 0.0937, 2.3479, -1.8830999, -0.0937, 2.3479, -1.8830999, 0.0937, -2.3479, -1.8830999, -0.0937, 2.3479, -1.8830999, -0.0937, -2.3479, -1.8830999, 0.0937, -2.3479, -1.8830999, 0.0937, 2.3479, 1.8830999, 0.0937, 2.3479, -1.8830999, 0.0937, -2.3479, 1.8830999, 0.0937, 2.3479, -1.8830999, 0.0937, -2.3479, -1.8830999, 0.0937, -2.3479, 1.8830999, -0.0937, 2.3479, -1.8830999, -0.0937, 2.3479, 1.8830999, -0.0937, -2.3479, -1.8830999, -0.0937, 2.3479, 1.8830999, -0.0937, -2.3479, 1.8830999, -0.0937, -2.3479, -1.8830999, 0.0937, 2.3479, 1.8830999, -0.0937, 2.3479, 1.8830999, 0.0937, 2.3479, -1.8830999, -0.0937, 2.3479, 1.8830999, -0.0937, 2.3479, -1.8830999, 0.0937, 2.3479, -1.8830999, -0.0937, -2.3479, 1.8830999, 0.0937, -2.3479, 1.8830999, -0.0937, -2.3479, -1.8830999, 0.0937, -2.3479, 1.8830999, 0.0937, -2.3479, -1.8830999, -0.0937, -2.3479, -1.8830999)
+
+[node name="Nextbot" type="CharacterBody3D" unique_id=650946020]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1499511527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38208008, 1.5117188, -1.3444824)
+shape = SubResource("BoxShape3D_3f502")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1638272516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40631104, 1.8479156, -1.3830566)
+material_override = SubResource("StandardMaterial3D_2q678")
+mesh = SubResource("BoxMesh_0eiqk")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1095642463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40631104, 1.8479156, -1.3830566)
+shape = SubResource("ConcavePolygonShape3D_qyyav")
