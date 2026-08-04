@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://f0nin1v771l4" path="res://settings_menu.gd" id="1_ufg0w"]
 [ext_resource type="Texture2D" uid="uid://de2m255whxhea" path="res://мурино настройки.png" id="2_0cmel"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cmel"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 1, 0.54901963)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="SettingsMenu" type="Control" unique_id=1379145175]
 layout_mode = 3
 anchors_preset = 0
@@ -69,6 +84,20 @@ offset_top = 377.0
 offset_right = 158.0
 offset_bottom = 408.0
 text = "Показывать FPS"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1126771365]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 220.0
+offset_right = 1025.0
+offset_bottom = 456.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0cmel")
+
+[node name="modlist" type="VBoxContainer" parent="ScrollContainer" unique_id=1934158694]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 4
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="toggled" from="FPSCheckBox" to="." method="_on_fps_check_box_toggled"]

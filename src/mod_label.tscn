@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bl87bmt4ahf6d"]
+
+[node name="modLabel" type="Label" unique_id=1449564376]
+autowrap_mode = 3

@@ -11,6 +11,15 @@ extends Control
 # Ссылка на галочку FPS
 @onready var fps_check_box: CheckBox = $FPSCheckBox
 
+# ███╗   ███╗ ██████╗ ██████╗     ██╗     ██╗███████╗████████╗
+# ████╗ ████║██╔═══██╗██╔══██╗    ██║     ██║██╔════╝╚══██╔══╝
+# ██╔████╔██║██║   ██║██║  ██║    ██║     ██║███████╗   ██║   
+# ██║╚██╔╝██║██║   ██║██║  ██║    ██║     ██║╚════██║   ██║   
+# ██║ ╚═╝ ██║╚██████╔╝██████╔╝    ███████╗██║███████║   ██║   
+# ╚═╝     ╚═╝ ╚═════╝ ╚═════╝     ╚══════╝╚═╝╚══════╝   ╚═╝   
+@onready var modlist: VBoxContainer = $ScrollContainer/modlist
+const MOD_LABEL = preload("res://mod_label.tscn")
+
 var current_sens: int = 30
 
 func _ready() -> void:
@@ -26,6 +35,11 @@ func _ready() -> void:
 	btn_minus.pressed.connect(_on_minus_pressed)
 	btn_plus.pressed.connect(_on_plus_pressed)
 	back_button.pressed.connect(_on_back_button_pressed)
+	
+	for mod in ModLoader.loadedMods:
+		var modLabel = MOD_LABEL.instantiate()
+		modLabel.text = mod
+		modlist.add_child(modLabel)
 
 func _on_minus_pressed() -> void:
 	if current_sens > 1:
