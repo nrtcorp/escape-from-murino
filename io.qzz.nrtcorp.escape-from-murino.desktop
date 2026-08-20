@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Escape from Murino
+Comment=Из Мурино нет выхода.
+Exec=escape-from-murino
+Icon=escape-from-murino
+Terminal=false
+Type=Application
+Categories=Game;
